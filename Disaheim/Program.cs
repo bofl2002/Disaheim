@@ -1,4 +1,7 @@
-﻿namespace Disaheim
+﻿
+using Spectre.Console;
+
+namespace Disaheim
 {
     internal class Program
     {

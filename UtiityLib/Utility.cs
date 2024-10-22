@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Disaheim;
 
-namespace Disaheim
+namespace UtilityLib
 {
     public class Utility
     {
@@ -34,6 +35,22 @@ namespace Disaheim
                         break;
  
             }return Price;
+        }
+
+        double price;       
+        public double GetValueOfCourse(Course course)
+        {
+            if (course.DurationInMinutes <= 0)
+            {
+                throw new ArgumentException("Course duration cannot be negative");
+            }
+
+            int fullhours = course.DurationInMinutes / 60;
+            int remainingMinutes = course.DurationInMinutes % 60;
+
+            int totalHours = fullhours + (remainingMinutes > 0 ? 1 : 0);
+            double value = totalHours * price;
+            return value;
         }
     }
 
