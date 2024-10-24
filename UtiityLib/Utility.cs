@@ -1,13 +1,13 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Disaheim;
+using System.Reflection.Emit;
 
 namespace UtilityLib
-{
-    public class Utility
+{public class Utility
     {
        
         public double GetValueOfBook(Book book)
@@ -51,7 +51,6 @@ namespace UtilityLib
             int totalHours = fullhours + (remainingMinutes > 0 ? 1 : 0);
             double value = totalHours * price;
             return value;
-        }
-    }
+    }*/
 
-}
+

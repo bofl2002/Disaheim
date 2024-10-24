@@ -12,6 +12,9 @@ namespace Disaheim
 
             Book book = new Book("");
             Console.WriteLine(book.ToString());
+
+            Course course = new Course("");
+            Console.WriteLine(course.ToString());
             
             
         }

@@ -11,6 +11,7 @@ namespace Disaheim
         public string Name { get; set; }
         public int DurationInMinutes { get; set; }
 
+
         public Course(string name, int durationInMinutes)
         {
             Name = name;
