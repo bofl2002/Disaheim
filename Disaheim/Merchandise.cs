@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public abstract class Merchandise
+    public abstract class Merchandise : IValuable
 
     {
         public string ItemId { get; set; }
@@ -19,6 +19,8 @@ namespace Disaheim
         {
             return $"ItemId: {ItemId}";
         }
+        public abstract double GetValue();
+
     }
 
 }

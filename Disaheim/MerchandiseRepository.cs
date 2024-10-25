@@ -9,7 +9,7 @@ namespace Disaheim
 {
     public class MerchandiseRepository
     {
-        Utility utility = new Utility();
+        //Utility utility = new Utility();
 
         private List<Merchandise> merchandises = new List<Merchandise>();
 
@@ -29,7 +29,7 @@ namespace Disaheim
             }
             return null;
         }
-
+        /*
         public double GetTotalValue(Merchandise merchandise)
         {
             double total = 0;
@@ -41,7 +41,7 @@ namespace Disaheim
                 }
             }
             return total;
-        }
+        }*/
         
 
         

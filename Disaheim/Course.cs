@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Course
+    public class Course : IValuable
     {
+        int fullhours = 0;
+        public static double CourseHourValue = 875.00;
         public string Name { get; set; }
         public int DurationInMinutes { get; set; }
 
@@ -24,7 +26,23 @@ namespace Disaheim
         }
         public override string ToString()
         {
-            return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}";
+            return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}, Value: {GetValue()}";
+        }
+        public  double GetValue()
+        {
+            double value;
+            if (DurationInMinutes <= 0)
+            {
+                value = 0;
+
+            }
+
+            fullhours = DurationInMinutes / 60;
+            int remainingMinutes = DurationInMinutes % 60;
+
+            int totalHours = fullhours + (remainingMinutes > 0 ? 1 : 0);
+            value = totalHours * CourseHourValue;
+            return value;
         }
     }
 }

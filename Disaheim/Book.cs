@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Disaheim
 {
-    public class Book : Merchandise
+    public class Book : Merchandise 
     {
         public string ItemId;
         public string Title;
@@ -35,5 +35,11 @@ namespace Disaheim
         {
             return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
         }
-    }   
+        public override double GetValue()
+        {
+            return Price;
+        }
+    }
+    
+
 }
